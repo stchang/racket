@@ -318,8 +318,10 @@
        (λ (frame parent)
          (new switchable-button%
                (label "Fix Laziness")
-               (bitmap (right-over-arrow-icon metal-icon-color (toolbar-icon-height)))
-               (alternate-bitmap (right-over-arrow-icon metal-icon-color (toolbar-icon-height)))
+               (bitmap (right-over-arrow-icon #:color metal-icon-color 
+                                              #:height (toolbar-icon-height)))
+               (alternate-bitmap (right-over-arrow-icon #:color metal-icon-color 
+                                                        #:height (toolbar-icon-height)))
                (parent parent)
                (callback (lambda (button) (send frame add-highlights-and-arrows)))))
        'racket-with-lazyinf
